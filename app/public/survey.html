@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find a Friend Survey</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Our CSS -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps|Special+Elite&display=swap" rel="stylesheet"> GoogleFonts-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/javascript.js"></script> <!-- Our Java -->
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 ">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h1>Whose Friend is it Anyways!?!</h1>
+                        1 = Strongly Disagree || 3 = No Opinion || 5 = Strongly Agree
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <form>
+                                    <table id="surveyTable">
+                                        <tr>
+                                            <th>Question</th>
+                                            <th>1</th>
+                                            <th>2</th>
+                                            <th>3</th>
+                                            <th>4</th>
+                                            <th>5</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Pineapple on Pizza is Awesome!!!</td>
+                                            <td><input type="radio" name="q1" value="1"></td>
+                                            <td><input type="radio" name="q1" value="2"></td>
+                                            <td><input type="radio" name="q1" value="3"></td>
+                                            <td><input type="radio" name="q1" value="4"></td>
+                                            <td><input type="radio" name="q1" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Star Trek was way cooler than Star Wars!!!</td>
+                                            <td><input type="radio" name="q2" value="1"></td>
+                                            <td><input type="radio" name="q2" value="2"></td>
+                                            <td><input type="radio" name="q2" value="3"></td>
+                                            <td><input type="radio" name="q2" value="4"></td>
+                                            <td><input type="radio" name="q2" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Macs are better than PCs!!!</td>
+                                            <td><input type="radio" name="q3" value="1"></td>
+                                            <td><input type="radio" name="q3" value="2"></td>
+                                            <td><input type="radio" name="q3" value="3"></td>
+                                            <td><input type="radio" name="q3" value="4"></td>
+                                            <td><input type="radio" name="q3" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jason is scarrier than Freddy!!!</td>
+                                            <td><input type="radio" name="q4" value="1"></td>
+                                            <td><input type="radio" name="q4" value="2"></td>
+                                            <td><input type="radio" name="q4" value="3"></td>
+                                            <td><input type="radio" name="q4" value="4"></td>
+                                            <td><input type="radio" name="q4" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>The Rolling Stones are better than the Beatles!!!</td>
+                                            <td><input type="radio" name="q5" value="1"></td>
+                                            <td><input type="radio" name="q5" value="2"></td>
+                                            <td><input type="radio" name="q5" value="3"></td>
+                                            <td><input type="radio" name="q5" value="4"></td>
+                                            <td><input type="radio" name="q5" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Beans belong in Chilli!!!</td>
+                                            <td><input type="radio" name="q6" value="1"></td>
+                                            <td><input type="radio" name="q6" value="2"></td>
+                                            <td><input type="radio" name="q6" value="3"></td>
+                                            <td><input type="radio" name="q6" value="4"></td>
+                                            <td><input type="radio" name="q6" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pies are better than Cakes!!!</td>
+                                            <td><input type="radio" name="q7" value="1"></td>
+                                            <td><input type="radio" name="q7" value="2"></td>
+                                            <td><input type="radio" name="q7" value="3"></td>
+                                            <td><input type="radio" name="q7" value="4"></td>
+                                            <td><input type="radio" name="q7" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cats are better pets than Dogs!!!</td>
+                                            <td><input type="radio" name="q8" value="1"></td>
+                                            <td><input type="radio" name="q8" value="2"></td>
+                                            <td><input type="radio" name="q8" value="3"></td>
+                                            <td><input type="radio" name="q8" value="4"></td>
+                                            <td><input type="radio" name="q8" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>November is too early for Chirstmas decorations!!!</td>
+                                            <td><input type="radio" name="q9" value="1"></td>
+                                            <td><input type="radio" name="q9" value="2"></td>
+                                            <td><input type="radio" name="q9" value="3"></td>
+                                            <td><input type="radio" name="q9" value="4"></td>
+                                            <td><input type="radio" name="q9" value="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vampires should sparkle!!!</td>
+                                            <td><input type="radio" name="q10" value="1"></td>
+                                            <td><input type="radio" name="q10" value="2"></td>
+                                            <td><input type="radio" name="q10" value="3"></td>
+                                            <td><input type="radio" name="q10" value="4"></td>
+                                            <td><input type="radio" name="q10" value="5"></td>
+                                        </tr>
+                                    </table>
+                                    <button type="button" class="btn btn-success" id="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+
+        <div class="row"> <!-- Row-->
+            <div class="col-12"></div> <!-- Content -->
+        </div>
+          
+        <div class="row"> <!-- Row-->
+            <div class="col-12"></div> <!-- Content -->
+        </div>
+        <div class="row"> <!-- Row-->
+            <div class="col-12"></div> <!-- Content -->
+        </div>
+        <div class="row"> <!-- Row-->
+            <div class="col-12"></div> <!-- Content -->
+        </div>
+
+        
+    </div>
+
+    <script>
+        
+        $("#submit").on("click", function(){
+            event.preventDefault();
+            console.log('click')
+            
+            // var newRes ={
+            //     cusNam: $('#resname').val().trim(),
+            //     cusTel: $('#restel').val().trim(),
+            //     cusEmail: $('#resemail').val().trim(),
+            //     cusID: $('#resid').val().trim(),
+            // }
+            // console.log(newRes)
+            
+        })
+
+    </script>
+
+</body>
+</html>
