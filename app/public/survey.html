@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Find a Friend Survey</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css"> <!-- Our CSS -->
+    <!--<link rel="stylesheet" href="assets/css/style.css">  Our CSS -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps|Special+Elite&display=swap" rel="stylesheet"> GoogleFonts-->
 
+    <script src="https://kit.fontawesome.com/314677fe35.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript/javascript.js"></script> <!-- Our Java -->
+    <!--<script src="assets/javascript/javascript.js"></script>  Our Java -->
 
 </head>
 <body>
@@ -31,6 +32,14 @@
                         <div class="row">
                             <div class="col-12">
                                 <form>
+                                    <div class="form-group">
+                                        <label for="userName"><i class="fas fa-user"></i> Name</label>
+                                        <input type="text" class="form-control" id="userName" placeholder="Pick your name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="userName"><i class="far fa-image"></i> Picture Link</label>
+                                        <input type="text" class="form-control" id="userPic" placeholder="Show us your Avatar">
+                                    </div>
                                     <table id="surveyTable">
                                         <tr>
                                             <th>Question</th>
@@ -121,7 +130,10 @@
                                             <td><input type="radio" name="q10" value="5"></td>
                                         </tr>
                                     </table>
-                                    <button type="button" class="btn btn-success" id="submit">Submit</button>
+                                    <button type="button" class="btn btn-success" id="submit">
+                                        <i class="far fa-paper-plane"></i>
+                                        Submit
+                                    </button>
                                 </form>
                             </div>
                         </div> 
@@ -129,22 +141,6 @@
                 </div>
             </div> 
         </div>
-
-
-        <div class="row"> <!-- Row-->
-            <div class="col-12"></div> <!-- Content -->
-        </div>
-          
-        <div class="row"> <!-- Row-->
-            <div class="col-12"></div> <!-- Content -->
-        </div>
-        <div class="row"> <!-- Row-->
-            <div class="col-12"></div> <!-- Content -->
-        </div>
-        <div class="row"> <!-- Row-->
-            <div class="col-12"></div> <!-- Content -->
-        </div>
-
         
     </div>
 
@@ -154,13 +150,28 @@
             event.preventDefault();
             console.log('click')
             
-            // var newRes ={
-            //     cusNam: $('#resname').val().trim(),
-            //     cusTel: $('#restel').val().trim(),
-            //     cusEmail: $('#resemail').val().trim(),
-            //     cusID: $('#resid').val().trim(),
-            // }
-            // console.log(newRes)
+            var radioValue = $("input[name='q1']:checked").val();
+
+
+
+
+            var newUser ={
+                userName: $('#userName').val().trim(),
+                userPic: $('#userPic').val().trim(),
+                userScores: [
+                    $("input[name='q1']:checked").val(),
+                    $("input[name='q2']:checked").val(),
+                    $("input[name='q3']:checked").val(),
+                    $("input[name='q4']:checked").val(),
+                    $("input[name='q5']:checked").val(),
+                    $("input[name='q6']:checked").val(),
+                    $("input[name='q7']:checked").val(),
+                    $("input[name='q8']:checked").val(),
+                    $("input[name='q9']:checked").val(),
+                    $("input[name='q10']:checked").val(),
+                ]
+            }
+            console.log(newUser)
             
         })
 
