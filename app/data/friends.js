@@ -1,6 +1,6 @@
 // Friend Finder Friend Data
 
-[
+var friendsArray = [
     {
     "userName": "Eric Cartman",
     "userPic": "cartman.png",
@@ -83,7 +83,9 @@
     },
 
 
-]
+];
+
+module.exports = friendsArray;
 
 
 // Blank User Template
