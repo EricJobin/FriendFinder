@@ -1,20 +1,105 @@
-// 5. You should save your application's data inside of `app/data/friends.js` as an array of objects. Each of these objects should roughly follow the format below.
+// Friend Finder Friend Data
 
-// ```json
+[
+    {
+    "userName": "Eric Cartman",
+    "userPic": "cartman.png",
+    "userScores": [
+    "5",
+    "1",
+    "4",
+    "4",
+    "5",
+    "1",
+    "2",
+    "5",
+    "4",
+    "1"
+    ]
+    },
+    {
+    "userName": "Freddy Krueger",
+    "userPic": "freddy.png",
+    "userScores": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+    ]
+    },
+    {
+    "userName": "Jason Voorhees",
+    "userPic": "jason.png",
+    "userScores": [
+    "5",
+    "5",
+    "5",
+    "5",
+    "5",
+    "5",
+    "5",
+    "5",
+    "5",
+    "5"
+    ]
+    },
+    {
+    "userName": "Link",
+    "userPic": "link.png",
+    "userScores": [
+    "1",
+    "1",
+    "4",
+    "5",
+    "3",
+    "5",
+    "5",
+    "3",
+    "3",
+    "4"
+    ]
+    },
+    {
+    "userName": "Elminster",
+    "userPic": "eleminster.png",
+    "userScores": [
+    "5",
+    "5",
+    "2",
+    "3",
+    "1",
+    "1",
+    "3",
+    "4",
+    "4",
+    "4"
+    ]
+    },
+
+
+]
+
+
+// Blank User Template
 // {
-//   "name":"Ahmed",
-//   "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-//   "scores":[
-//       5,
-//       1,
-//       4,
-//       4,
-//       5,
-//       1,
-//       2,
-//       5,
-//       4,
-//       1
-//     ]
-// }
-// ```
+// "userName": "",
+// "userPic": "",
+// "userScores": [
+// "",
+// "",
+// "",
+// "",
+// "",
+// "",
+// "",
+// "",
+// "",
+// ""
+// ]
+// },
