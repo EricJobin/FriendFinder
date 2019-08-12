@@ -10,27 +10,27 @@ var friendsArray = require("../data/friends");
 // ROUTING
 // ===============================================================================
 
+//troubleshooting variables
+// var t0,t1,t2,t3,t4,t5;
+
 function absDiff(user, notuser) {
     var z=[];
+    var zsum = 0;
     for(var i = 0; i<user.length; i++){
         z[i] = Math.abs(parseInt(user[i]) - parseInt(notuser[i]))
     }
-    //z should now be an array of absolute differences of survey answers
-
-    //sum array to find total difference and return this value
+    for (var i=0; i<z.length; i++){zsum=zsum+z[i]}
+    return zsum
 }
 
-function bestMatch(me, them){
-    var bestie;
+function bestMatch(me, them){ //passing in me = survey results , them = friendsArray
+    var bestie=-1;
+    var bestieScore=100;
     for (var i=0; i < them.length; i++){
-        absDiff(me.userScores, them.userScores)
-        
-
-
-
-
+        var thisguy = absDiff(me.userScores, them[i].userScores);
+        if (thisguy < bestieScore && me.userName != them[i].userName){bestie=i; bestieScore = thisguy}
     }
-
+    return bestie;
 }
 
 module.exports = function(app) {
@@ -52,19 +52,25 @@ module.exports = function(app) {
         friendsArray.push(req.body);
         // req.body is the survey results from user
 
-        bestMatch(req.body, friendsArray)
+        var foundFriend = bestMatch(req.body, friendsArray)
 
 
+        res.json(friendsArray[foundFriend]);
 
 
+        // t0= '1: req.body.userScores; 2: friendsArray[0].userScores, 3: req.body.userName; 4: friendsArray[0].userName; 5: foundFriend'
+        // t1= req.body.userScores;
+        // t2= friendsArray[0].userScores;
+        // t3= req.body.userName;
+        // t4= friendsArray[0].userName;
+        // t5= foundFriend;
 
-
-
-
-
-        res.json(friendsArray);
         
-        // res.json("Let see if I see this");
+
+        // var answer=[t0,t1, t2, t3, t4, t5 ]
+
+        // res.json(answer);
+        
     
     });
 };
