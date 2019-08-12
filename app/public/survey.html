@@ -148,7 +148,6 @@
         
         $("#submit").on("click", function(){
             event.preventDefault();
-            console.log('click')
 
             var newUser ={
                 userName: $('#userName').val().trim(),
@@ -171,9 +170,10 @@
             $.post("/api/survey", newUser, function(data) {
 
                 if (data) {
-                console.log("data: " + data);
+                    console.log("data: ");
+                    console.log(data)
                 }
-                console.log('posted data to /api/survey')
+                // console.log('posted data to /api/survey')
             });
 
 

@@ -10,6 +10,29 @@ var friendsArray = require("../data/friends");
 // ROUTING
 // ===============================================================================
 
+function absDiff(user, notuser) {
+    var z=[];
+    for(var i = 0; i<user.length; i++){
+        z[i] = Math.abs(parseInt(user[i]) - parseInt(notuser[i]))
+    }
+    //z should now be an array of absolute differences of survey answers
+
+    //sum array to find total difference and return this value
+}
+
+function bestMatch(me, them){
+    var bestie;
+    for (var i=0; i < them.length; i++){
+        absDiff(me.userScores, them.userScores)
+        
+
+
+
+
+    }
+
+}
+
 module.exports = function(app) {
 
     app.get("/api/survey", function(req, res) {
@@ -24,25 +47,24 @@ module.exports = function(app) {
   // Then the server saves the data to the tableData array)
   // ---------------------------------------------------------------------------
 
-  app.post("/api/survey", function(req, res) {
-    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-    // It will do this by sending out the value "true" have a table
-    // req.body is available since we're using the body parsing middleware
+    app.post("/api/survey", function(req, res) {
+
+        friendsArray.push(req.body);
+        // req.body is the survey results from user
+
+        bestMatch(req.body, friendsArray)
+
+
+
+
+
+
+
+
+
+        res.json(friendsArray);
+        
+        // res.json("Let see if I see this");
     
-    res.json(friendsArray);
-    
-   
-  });
-
-  // ---------------------------------------------------------------------------
-  // I added this below code so you could clear out the table while working with the functionality.
-  // Don"t worry about it!
-
-//   app.post("/api/clear", function(req, res) {
-//     // Empty out the arrays of data
-//     tableData.length = 0;
-//     waitListData.length = 0;
-
-//     res.json({ ok: true });
-//   });
+    });
 };
