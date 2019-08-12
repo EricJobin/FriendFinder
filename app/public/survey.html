@@ -149,11 +149,6 @@
         $("#submit").on("click", function(){
             event.preventDefault();
             console.log('click')
-            
-            var radioValue = $("input[name='q1']:checked").val();
-
-
-
 
             var newUser ={
                 userName: $('#userName').val().trim(),
@@ -172,7 +167,19 @@
                 ]
             }
             console.log(newUser)
-            
+
+            $.post("/api/survey", newUser, function(data) {
+
+                if (data) {
+                console.log("data: " + data);
+                }
+                console.log('posted data to /api/survey')
+            });
+
+
+
+
+
         })
 
     </script>
