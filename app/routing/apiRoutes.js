@@ -12,6 +12,7 @@ function absDiff(user, notuser) {//Inputing survey results for the current surve
     return zsum
 }
 
+//This function is the magic that finds you your new best friend
 function bestMatch(me, them){ //passing in me = survey results , them = friendsArray
     var bestie=-1;
     var bestieScore=100;

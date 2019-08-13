@@ -67,7 +67,7 @@ var friendsArray = [
     },
     {
     "userName": "Elminster",
-    "userPic": "eleminster.png",
+    "userPic": "elminster.png",
     "userScores": [
     "5",
     "5",
