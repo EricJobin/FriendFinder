@@ -25,7 +25,6 @@
             <div class="col-12 ">
                 <div class="card shadow">
                     <div class="card-header">
-                            <!-- <img src="../data/images/cartman.png"> -->
                         <h1>Whose Friend is it Anyways!?!</h1>
                         1 = Strongly Disagree || 3 = No Opinion || 5 = Strongly Agree
                     </div>
@@ -197,24 +196,12 @@
 
             $.post("/api/survey", newUser, function(data) {
 
-                // if (data) {
-                //     console.log("data: ");
-                //     console.log(data)
-                // }
-                // console.log('posted data to /api/survey')
-
+                $("#bffpic").empty();
+                $("#bffpic").append(`<img src='/images/${data.userPic}'>`);
                 $("#bffname").empty();
                 $("#bffname").append(`${data.userName}`);
-                $("#bffpic").empty();
-                // $("#bffpic").append(`<img src='../data/images/${data.userPic}'>`);
-                $("#bffpic").append(`<img src="./app/data/images/cartman.png">`);
-                // $("#bffpic").append(`test`);
-
-                //<img src="../data/images/cartman.png">
-                //<img src="../data/images/cartman.png">
 
             });
-
         })
 
     </script>
