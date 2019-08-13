@@ -25,6 +25,7 @@
             <div class="col-12 ">
                 <div class="card shadow">
                     <div class="card-header">
+                            <!-- <img src="../data/images/cartman.png"> -->
                         <h1>Whose Friend is it Anyways!?!</h1>
                         1 = Strongly Disagree || 3 = No Opinion || 5 = Strongly Agree
                     </div>
@@ -130,7 +131,13 @@
                                             <td><input type="radio" name="q10" value="5"></td>
                                         </tr>
                                     </table>
-                                    <button type="button" class="btn btn-success" id="submit">
+                                    <!-- <button type="button" class="btn btn-success" id="submit">
+                                        <i class="far fa-paper-plane"></i>
+                                        Submit
+                                    </button> -->
+
+                                    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+                                    <button type="button" class="btn btn-success" id="submit" data-toggle="modal" data-target="#myModal">
                                         <i class="far fa-paper-plane"></i>
                                         Submit
                                     </button>
@@ -140,6 +147,27 @@
                     </div>
                 </div>
             </div> 
+        </div>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+            
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Meet Your New Best Friend</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div id="bffpic"></div>
+                        <h1 id="bffname">Name</h1>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
         
     </div>
@@ -169,16 +197,23 @@
 
             $.post("/api/survey", newUser, function(data) {
 
-                if (data) {
-                    console.log("data: ");
-                    console.log(data)
-                }
+                // if (data) {
+                //     console.log("data: ");
+                //     console.log(data)
+                // }
                 // console.log('posted data to /api/survey')
+
+                $("#bffname").empty();
+                $("#bffname").append(`${data.userName}`);
+                $("#bffpic").empty();
+                // $("#bffpic").append(`<img src='../data/images/${data.userPic}'>`);
+                $("#bffpic").append(`<img src="./app/data/images/cartman.png">`);
+                // $("#bffpic").append(`test`);
+
+                //<img src="../data/images/cartman.png">
+                //<img src="../data/images/cartman.png">
+
             });
-
-
-
-
 
         })
 

@@ -1,4 +1,4 @@
-// Friend Finder Page Route Paths
+// Friend Finder HTML Page Route Paths
 
 var path = require("path");
 
